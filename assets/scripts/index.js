@@ -1,9 +1,11 @@
+// page elements 
 const openIcon = document.getElementById('menu-open'),
       closeIcon = document.getElementById('menu-close'),
       navContainer = document.getElementById('nav-container');
 
 const mediaQuery = window.matchMedia('(min-width: 796px)');
 
+// if menu is closed and clicked, switch to closeIcon and open menu
 if (openIcon) {
     openIcon.addEventListener('click', () => {
         openIcon.style.display = 'none';
@@ -12,6 +14,7 @@ if (openIcon) {
     })
 }
 
+// if menu is open and clicked, switch to openIcon and close menu
 if (closeIcon) {
     closeIcon.addEventListener('click', () => {
         openIcon.style.display = 'block';
@@ -20,6 +23,7 @@ if (closeIcon) {
     })
 }
 
+// alter menu depending on device size
 function handleDeviceSizes(e) {
     if (mediaQuery.matches) {
         closeIcon.style.display = 'none';
